@@ -7,6 +7,11 @@
     @apply mx-auto w-full max-w-[1150px] px-5;
   }
 
+  *:focus {
+    outline: 2px dashed #d87d4a;
+    outline-offset: 3px;
+  }
+
   @font-face {
     font-family: "Manrope";
     src:
@@ -35,5 +40,19 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+  }
+}
+
+@layer components {
+  .orange-button {
+    @apply bg-orange hover:bg-light-orange text-white-100 inline-block  min-w-40 p-4 text-center text-[13px] font-bold uppercase tracking-[1px] transition-colors;
+  }
+
+  .accent-button {
+    @apply text-dark-100 hover:text-white-100  inline-block min-w-40 border  bg-none p-4 text-center text-[13px] font-bold uppercase tracking-[1px] transition-colors hover:bg-black;
+  }
+
+  .link-button {
+    @apply text-dark-50 after:bg-arrow hover:text-orange inline-flex min-w-40 items-center p-4 font-bold uppercase after:ml-3 after:h-3 after:w-2;
   }
 }
