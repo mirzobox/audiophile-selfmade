@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     fontFamily: {
-      inter: ["Inter", "Arial", "sans-serif"],
+      manrope: ["Manrope", "Arial", "sans-serif"],
     },
     extend: {},
   },
