@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Cart from "./Cart";
 import Burger from "./Burger";
 import HeaderLogo from "./HeaderLogo";
+import AuthManager from "./AuthManager";
 
 function Header() {
   return (
@@ -11,6 +12,7 @@ function Header() {
         <HeaderLogo />
         <Navbar />
         <Cart />
+        <AuthManager />
       </div>
     </header>
   );

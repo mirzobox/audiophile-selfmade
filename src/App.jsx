@@ -4,6 +4,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+
 // Pages
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
@@ -14,12 +15,18 @@ import Login from "./pages/Login";
 // Layouts
 import MainLayouts from "./layouts/MainLayouts";
 import ProtectedRoutes from "./layouts/ProtectedRoutes";
-import { useSelector } from "react-redux";
 import Signup from "./pages/Signup";
 
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect } from "react";
+import { setAuthReady, setUser } from "./redux/slices/user";
+import { auth } from "./firebase/firebase-config";
+
 function App() {
-  // const user = true;
-  const user = useSelector((state) => state.user.user);
+  const { user, isAuthReady } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -57,7 +64,16 @@ function App() {
       element: user ? <Navigate to="/" /> : <Signup />,
     },
   ]);
-  return <RouterProvider router={routes} />;
+
+  // Remember login
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      dispatch(setUser(user));
+      dispatch(setAuthReady(true));
+    });
+  }, []);
+
+  return isAuthReady && <RouterProvider router={routes} />;
 }
 
 export default App;
