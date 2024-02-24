@@ -1,8 +1,9 @@
-// State
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
 // Router
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 // Pages
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
@@ -12,12 +13,21 @@ import Login from "./pages/Login";
 
 // Layouts
 import MainLayouts from "./layouts/MainLayouts";
+import ProtectedRoutes from "./layouts/ProtectedRoutes";
+import { useSelector } from "react-redux";
+import Signup from "./pages/Signup";
 
 function App() {
+  // const user = true;
+  const user = useSelector((state) => state.user.user);
   const routes = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayouts />,
+      element: (
+        <ProtectedRoutes user={user}>
+          <MainLayouts />
+        </ProtectedRoutes>
+      ),
       children: [
         {
           index: true,
@@ -40,14 +50,14 @@ function App() {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: user ? <Navigate to="/" /> : <Login />,
+    },
+    {
+      path: "/signup",
+      element: user ? <Navigate to="/" /> : <Signup />,
     },
   ]);
-  return (
-    <Provider store={store}>
-      <RouterProvider router={routes} />
-    </Provider>
-  );
+  return <RouterProvider router={routes} />;
 }
 
 export default App;

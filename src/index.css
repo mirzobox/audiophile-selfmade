@@ -44,15 +44,21 @@
 }
 
 @layer components {
+  /* Buttons */
   .orange-button {
-    @apply bg-orange hover:bg-light-orange text-white-100 inline-block  min-w-40 p-4 text-center text-[13px] font-bold uppercase tracking-[1px] transition-colors;
+    @apply inline-block min-w-40 bg-orange p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-white-100 transition-colors hover:bg-light-orange;
   }
 
   .accent-button {
-    @apply text-dark-100 hover:text-white-100  inline-block min-w-40 border  bg-none p-4 text-center text-[13px] font-bold uppercase tracking-[1px] transition-colors hover:bg-black;
+    @apply inline-block min-w-40  border bg-none p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-dark-100 transition-colors hover:bg-black hover:text-white-100;
   }
 
   .link-button {
-    @apply text-dark-50 after:bg-arrow hover:text-orange inline-flex min-w-40 items-center p-4 font-bold uppercase after:ml-3 after:h-3 after:w-2;
+    @apply inline-flex min-w-40 items-center p-4 font-bold uppercase text-dark-50 after:ml-3 after:h-3 after:w-2 after:bg-arrow hover:text-orange;
+  }
+
+  /* Inputs */
+  .login-input {
+    @apply border-input-border w-full rounded-lg border bg-transparent px-6 py-4 text-[14px] font-bold text-light-orange placeholder:-tracking-[0.25px];
   }
 }

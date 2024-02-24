@@ -1,14 +1,26 @@
 import { NavLink } from "react-router-dom";
-function Login() {
+function Signup() {
   return (
     <section className="h-full w-full bg-black">
       <div className="base-container flex h-full items-center justify-center">
         <div className="flex w-full max-w-md flex-col">
           <h2 className="mb-5 text-center text-3xl font-bold text-orange">
-            Login
+            Signup
           </h2>
           <form className="mb-4">
             <div className="mb-6 flex flex-col gap-4">
+              <label>
+                <span className="mb-2 block font-bold text-white-100">
+                  Username
+                </span>
+                <input
+                  className="login-input"
+                  type="text"
+                  name="displayName"
+                  placeholder="Enter your username"
+                  autoComplete="off"
+                />
+              </label>
               <label>
                 <span className="mb-2 block font-bold text-white-100">
                   Email*
@@ -32,9 +44,9 @@ function Login() {
           </form>
           <NavLink
             className="text-white-50 ml-auto underline hover:no-underline"
-            to="/signup"
+            to="/login"
           >
-            If you have not account yet ?
+            I have already registered
           </NavLink>
         </div>
       </div>
@@ -42,4 +54,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

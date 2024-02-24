@@ -19,9 +19,11 @@ export default {
       dark: {
         100: "#000000",
         50: "rgba(0,0,0,0.5)",
+        40: "rgba(0,0,0,0.4)",
       },
       "light-gray": "#fafafa",
       "light-orange": "#fbaf85",
+      "input-border": "#cfcfcf",
     },
     extend: {
       backgroundImage: {
