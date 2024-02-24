@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function HeaderNavbar({ type }) {
   const links = [
     {
       path: "/",
@@ -21,13 +21,13 @@ function Navbar() {
   ];
 
   return (
-    <nav>
+    <nav className="ml-auto hidden md:block">
       <ul className="flex items-center gap-8">
         {links.map(({ path, text }) => {
           return (
             <li key={path}>
               <NavLink
-                className="text-white-100 text-[13px] font-bold uppercase leading-6 tracking-[2px]"
+                className="text-[13px] font-bold uppercase leading-6 tracking-[2px] text-white-100 transition-colors hover:text-orange"
                 to={path}
               >
                 {text}
@@ -40,4 +40,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default HeaderNavbar;
