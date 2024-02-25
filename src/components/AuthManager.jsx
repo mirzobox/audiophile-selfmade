@@ -15,7 +15,7 @@ function AuthManager() {
   }
   return (
     <button
-      className="text-white-50 ml-6 font-bold hover:underline"
+      className="ml-6 shrink-0 font-bold text-white-50 hover:underline"
       title="Click and signout"
       onClick={out}
     >
