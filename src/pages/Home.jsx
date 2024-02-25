@@ -1,5 +1,11 @@
+import IndexHero from "../components/IndexHero";
+
 function Home() {
-  return <div>Home page</div>;
+  return (
+    <>
+      <IndexHero />
+    </>
+  );
 }
 
 export default Home;

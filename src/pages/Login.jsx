@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 function Login() {
   const { loginWithEmailAndPassword, loginWithGoogleProvider } = useLogin();
   const { isPending } = useSelector((state) => state.user);
-  console.log(isPending);
   function handleSubmit(e) {
     e.preventDefault();
     const data = getFormData(e.target);
@@ -24,9 +23,7 @@ function Login() {
           <form onSubmit={handleSubmit} className="mb-4">
             <div className="mb-6 flex flex-col gap-4">
               <label>
-                <span className="mb-2 block font-bold text-white-100">
-                  Email*
-                </span>
+                <span className="label-input">Email*</span>
                 <input
                   className="login-input"
                   type="email"
@@ -37,9 +34,7 @@ function Login() {
                 />
               </label>
               <label>
-                <span className="mb-2 block font-bold text-white-100">
-                  Password*
-                </span>
+                <span className="label-input">Password*</span>
                 <input
                   className="login-input"
                   type="password"
@@ -58,7 +53,7 @@ function Login() {
                 {isPending ? "Loading..." : "Submit"}
               </button>
               <button
-                className="accent-button rounded-lg border-white-100 text-white-100 transition-opacity hover:opacity-80"
+                className="accent-button-white"
                 onClick={handleLogin}
                 type="button"
               >

@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import useLogin from "../hooks/useLogin";
 import getFormData from "../utils/get-form-data";
+import { useSelector } from "react-redux";
 function Signup() {
   const { loginWithDisplayNameAndEmailAndPassword, loginWithGoogleProvider } =
     useLogin();
+  const { isPending } = useSelector((state) => state.user);
   function handleSubmit(e) {
     e.preventDefault();
     const data = getFormData(e.target);
@@ -22,9 +24,7 @@ function Signup() {
           <form onSubmit={handleSubmit} className="mb-4">
             <div className="mb-6 flex flex-col gap-4">
               <label>
-                <span className="mb-2 block font-bold text-white-100">
-                  Username
-                </span>
+                <span className="label-input">Username</span>
                 <input
                   className="login-input"
                   type="text"
@@ -34,9 +34,7 @@ function Signup() {
                 />
               </label>
               <label>
-                <span className="mb-2 block font-bold text-white-100">
-                  Email*
-                </span>
+                <span className="label-input">Email*</span>
                 <input
                   className="login-input"
                   type="email"
@@ -47,9 +45,7 @@ function Signup() {
                 />
               </label>
               <label>
-                <span className="mb-2 block font-bold text-white-100">
-                  Password*
-                </span>
+                <span className="label-input">Password*</span>
                 <input
                   className="login-input"
                   type="password"
@@ -61,10 +57,12 @@ function Signup() {
               </label>
             </div>
             <div className="flex w-full flex-col gap-3">
-              <button className="orange-button rounded-lg">Submit</button>
+              <button className="orange-button rounded-lg" disabled={isPending}>
+                {isPending ? "Loading..." : "Submit"}
+              </button>
               <button
                 onClick={handleLogin}
-                className="accent-button rounded-lg border-white-100 text-white-100 transition-opacity hover:opacity-80"
+                className="accent-button-white"
                 type="button"
               >
                 Google

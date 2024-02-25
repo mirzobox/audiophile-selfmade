@@ -19,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       newestOnTop={false}
       rtl={false}
       draggable
+      pauseOnFocusLoss={false}
       pauseOnHover
       theme="colored"
       transition={Bounce}
