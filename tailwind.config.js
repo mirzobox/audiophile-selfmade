@@ -32,6 +32,7 @@ export default {
         "mobile-header-bg": "url('./assets/home/mobile/image-header.jpg')",
         "tablet-header-bg": "url('./assets/home/tablet/image-header.jpg')",
         "desktop-header-bg": "url('./assets/home/desktop/image-hero.jpg')",
+        "circles-bg": "url('./assets/home/desktop/pattern-circles.svg')",
       },
     },
   },
