@@ -66,7 +66,7 @@
   }
 
   .accent-button {
-    @apply inline-block min-w-40  border bg-transparent p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-dark-100 transition-colors hover:bg-black hover:text-white-100;
+    @apply inline-block min-w-40  border bg-transparent p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-dark-100 transition-colors hover:border-dark-100 hover:bg-dark-100 hover:text-white-100;
   }
 
   .accent-button-white {
@@ -88,7 +88,7 @@
 
   /* Titles */
   .title {
-    @apply text-[28px] font-bold uppercase leading-none tracking-[2px] sm:text-[40px] sm:leading-[44px];
+    @apply text-[28px] font-bold uppercase leading-tight tracking-[2px] sm:text-[40px];
   }
 
   /* Badges  */
