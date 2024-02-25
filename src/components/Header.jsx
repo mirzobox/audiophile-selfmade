@@ -6,7 +6,7 @@ import AuthManager from "./AuthManager";
 
 function Header() {
   return (
-    <header className="border-b border-b-white-20 bg-black pb-9 pt-8">
+    <header className="border-b border-b-white-20 bg-dark-100 pb-9 pt-8">
       <div className="base-container flex items-center justify-between">
         <Burger />
         <HeaderLogo />
