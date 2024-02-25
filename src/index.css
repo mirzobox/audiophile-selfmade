@@ -15,6 +15,10 @@
     @apply flex h-full flex-col;
   }
 
+  main {
+    @apply grow;
+  }
+
   .base-container {
     @apply mx-auto w-full max-w-[1150px] px-5;
   }
