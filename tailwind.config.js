@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./src/**/*.{js,jsx}"],
   theme: {
     fontFamily: {
       manrope: ["Manrope", "Arial", "sans-serif"],
@@ -13,6 +13,7 @@ export default {
       gray: "#f1f1f1",
       white: {
         100: "#ffffff",
+        75: "rgba(255,255,255,0.75)",
         50: "rgba(255,255,255,0.5)",
         20: "rgba(255,255,255,0.2)",
       },
@@ -28,6 +29,9 @@ export default {
     extend: {
       backgroundImage: {
         arrow: "url('./assets/shared/desktop/icon-arrow-right.svg')",
+        "mobile-header-bg": "url('./assets/home/mobile/image-header.jpg')",
+        "tablet-header-bg": "url('./assets/home/tablet/image-header.jpg')",
+        "desktop-header-bg": "url('./assets/home/desktop/image-hero.jpg')",
       },
     },
   },

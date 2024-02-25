@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full font-manrope text-[15px] font-medium leading-6 text-dark-50;
+  }
+
+  #root {
+    @apply flex h-full flex-col;
+  }
+
   .base-container {
     @apply mx-auto w-full max-w-[1150px] px-5;
   }
@@ -50,7 +62,11 @@
   }
 
   .accent-button {
-    @apply inline-block min-w-40  border bg-none p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-dark-100 transition-colors hover:bg-black hover:text-white-100;
+    @apply inline-block min-w-40  border bg-transparent p-4  text-center text-[13px] font-bold uppercase tracking-[1px] text-dark-100 transition-colors hover:bg-black hover:text-white-100;
+  }
+
+  .accent-button-white {
+    @apply inline-block rounded-lg  border bg-transparent p-4 text-center text-[13px] font-bold uppercase tracking-[1px] text-white-100  transition-opacity hover:opacity-80;
   }
 
   .link-button {
@@ -59,6 +75,20 @@
 
   /* Inputs */
   .login-input {
-    @apply border-input-border w-full rounded-lg border bg-transparent px-6 py-4 text-[14px] font-bold text-light-orange placeholder:-tracking-[0.25px];
+    @apply w-full rounded-lg border border-input-border bg-transparent px-6 py-4 text-[14px] font-bold text-light-orange placeholder:-tracking-[0.25px];
+  }
+
+  .label-input {
+    @apply mb-2 block font-bold text-white-100;
+  }
+
+  /* Titles */
+  .title {
+    @apply text-4xl font-bold uppercase tracking-[1.29px];
+  }
+
+  /* Badges  */
+  .new-badge {
+    @apply text-[14px] uppercase tracking-[10px] text-orange text-white-50;
   }
 }
