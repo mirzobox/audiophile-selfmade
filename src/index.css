@@ -70,7 +70,7 @@
   }
 
   .link-button {
-    @apply inline-flex min-w-40 items-center p-4 font-bold uppercase text-dark-50 after:ml-3 after:h-3 after:w-2 after:bg-arrow hover:text-orange;
+    @apply inline-flex items-center p-4 font-bold uppercase text-dark-50 after:ml-3 after:h-3 after:w-2 after:bg-arrow hover:text-orange;
   }
 
   /* Inputs */
@@ -84,7 +84,7 @@
 
   /* Titles */
   .title {
-    @apply text-4xl font-bold uppercase tracking-[1.29px];
+    @apply text-[28px] font-bold uppercase leading-none tracking-[2px] sm:text-[40px] sm:leading-[44px];
   }
 
   /* Badges  */
