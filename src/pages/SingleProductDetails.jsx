@@ -10,11 +10,14 @@ import { useEffect, useState } from "react";
 import getSingleData from "../utils/get-single-data";
 import getImageLocation from "../utils/get-image-location";
 import ProductCounter from "../components/ProductCounter";
+import { useDispatch } from "react-redux";
+import { incrementOrAddProduct } from "../redux/slices/cart";
 
 function SingleProductDetails() {
   const [singleDetails, setSingleDetails] = useState({});
   const { slug } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getSingleData(slug)
@@ -33,9 +36,16 @@ function SingleProductDetails() {
     includes,
     gallery,
     others,
+    slug: uniqueSlug,
   } = singleDetails;
 
   console.log(singleDetails);
+
+  function handleClick(item) {
+    getSingleData(item)
+      .then((res) => res.json())
+      .then((res) => dispatch(incrementOrAddProduct(...res)));
+  }
 
   return (
     <section>
@@ -64,7 +74,12 @@ function SingleProductDetails() {
             </strong>
             <div className="flex gap-2">
               <ProductCounter amount={amount} />
-              <button className="orange-button">Add to cart</button>
+              <button
+                className="orange-button"
+                onClick={() => handleClick(uniqueSlug)}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
           <picture>
@@ -184,7 +199,10 @@ function SingleProductDetails() {
           <ul className="flex flex-col gap-14 sm:flex-row">
             {others?.map(({ image, name: title, slug }) => {
               return (
-                <li className="flex flex-col-reverse items-center text-center">
+                <li
+                  className="flex flex-col-reverse items-center text-center"
+                  key={title}
+                >
                   <div>
                     <h3 className="mb-8 text-[24px] font-bold tracking-[1.71px] text-dark-100">
                       {title}
