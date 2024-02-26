@@ -4,7 +4,7 @@ import CategoryHero from "../components/CategoryHero";
 import CompanyInfo from "../components/CompanyInfo";
 import getCategory from "../utils/get-category";
 import CategoriesWrapper from "../components/CategoriesWrapper";
-import { useLocation } from "react-router-dom";
+import { ScrollRestoration, useLocation } from "react-router-dom";
 
 function Earphones() {
   const [products, setProducts] = useState([]);
@@ -20,6 +20,7 @@ function Earphones() {
 
   return (
     <>
+      <ScrollRestoration />
       <CategoryHero content={path} />
       <CategoriesWrapper products={products} />
       <Categories />

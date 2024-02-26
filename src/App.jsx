@@ -23,6 +23,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { setAuthReady, setUser } from "./redux/slices/user";
 import { auth } from "./firebase/firebase-config";
+import SingleProductDetails from "./pages/SingleProductDetails";
 
 function App() {
   const { user, isAuthReady } = useSelector((state) => state.user);
@@ -52,6 +53,10 @@ function App() {
         {
           path: "/earphones",
           element: <Earphones />,
+        },
+        {
+          path: "/single-product-details/:slug",
+          element: <SingleProductDetails />,
         },
       ],
     },

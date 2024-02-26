@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "json-server ./src/db/products.json -w --port 4000",
     "build": "vite build",
     "preview": "vite preview"
   },

@@ -12,7 +12,10 @@ function IndexHero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <NavLink className="orange-button" to="/headphones">
+          <NavLink
+            className="orange-button"
+            to="/single-product-details/xx99-mark-two-headphones"
+          >
             See product
           </NavLink>
         </div>

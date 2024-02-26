@@ -38,7 +38,7 @@ function Categories() {
                     <h3 className="font-bold uppercase tracking-[1.07px] text-dark-100">
                       {title}
                     </h3>
-                    <NavLink className="link-button" to={path}>
+                    <NavLink className="link-button outline-none" to={path}>
                       Shop
                     </NavLink>
                   </div>

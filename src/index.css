@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply h-full;
+    @apply h-full scroll-smooth;
   }
 
   body {
@@ -88,11 +88,11 @@
 
   /* Titles */
   .title {
-    @apply text-[28px] font-bold uppercase leading-tight tracking-[2px] sm:text-[40px];
+    @apply text-[28px] font-bold uppercase leading-tight tracking-[2px] text-dark-100 sm:text-[40px];
   }
 
   /* Badges  */
   .new-badge {
-    @apply text-[14px] uppercase tracking-[10px] text-orange text-white-50;
+    @apply text-[14px] uppercase tracking-[10px] text-orange;
   }
 }

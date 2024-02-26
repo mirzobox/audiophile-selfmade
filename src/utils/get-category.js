@@ -1,8 +1,5 @@
 async function getCategory(category = "") {
-  const response = await fetch(
-    `http://localhost:4000/products?category=${category}`,
-  );
-  return response;
+  return await fetch(`http://localhost:4000/products?category=${category}`);
 }
 
 export default getCategory;

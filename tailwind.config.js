@@ -21,6 +21,7 @@ export default {
         100: "#000000",
         50: "rgba(0,0,0,0.5)",
         40: "rgba(0,0,0,0.4)",
+        25: "rgba(0,0,0,0.25)",
       },
       "light-gray": "#fafafa",
       "light-orange": "#fbaf85",
