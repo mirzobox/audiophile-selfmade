@@ -1,5 +1,7 @@
 async function getSingleData(slug = "") {
-  return await fetch(`http://localhost:4000/products?slug=${slug}`);
+  return await fetch(
+    `https://audiophile-backend-htgg.onrender.com/products?slug=${slug}`,
+  );
 }
 
 export default getSingleData;
