@@ -1,6 +1,6 @@
-import BestGearImgMobile from "../assets/shared/mobile/image-best-gear.jpg";
-import BestGearImgTablet from "../assets/shared/tablet/image-best-gear.jpg";
-import BestGearImgDesktop from "../assets/shared/desktop/image-best-gear.jpg";
+import BestGearImgMobile from "/assets/shared/mobile/image-best-gear.jpg";
+import BestGearImgTablet from "/assets/shared/tablet/image-best-gear.jpg";
+import BestGearImgDesktop from "/assets/shared/desktop/image-best-gear.jpg";
 
 function CompanyInfo() {
   return (

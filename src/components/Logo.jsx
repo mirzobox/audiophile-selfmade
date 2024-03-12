@@ -1,4 +1,4 @@
-import LogoImg from "../assets/shared/desktop/logo.svg";
+import LogoImg from "/assets/shared/desktop/logo.svg";
 
 function Logo() {
   return (

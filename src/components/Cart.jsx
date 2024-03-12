@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Basket from "../assets/shared/desktop/icon-cart.svg";
+import Basket from "/assets/shared/desktop/icon-cart.svg";
 function Cart() {
   const { allProductAmount } = useSelector((state) => state.cart);
   return (

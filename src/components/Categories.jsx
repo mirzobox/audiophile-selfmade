@@ -1,6 +1,6 @@
-import HeadphoneImg from "../assets/shared/desktop/image-category-thumbnail-headphones.png";
-import SpeakerImg from "../assets/shared/desktop/image-category-thumbnail-speakers.png";
-import EarphoneImg from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
+import HeadphoneImg from "/assets/shared/desktop/image-category-thumbnail-headphones.png";
+import SpeakerImg from "/assets/shared/desktop/image-category-thumbnail-speakers.png";
+import EarphoneImg from "/assets/shared/desktop/image-category-thumbnail-earphones.png";
 import { NavLink } from "react-router-dom";
 function Categories() {
   const categories = [

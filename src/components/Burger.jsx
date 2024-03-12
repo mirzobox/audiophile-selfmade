@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import BurgerMenuIcon from "../assets/shared/tablet/icon-hamburger.svg";
+import BurgerMenuIcon from "/assets/shared/tablet/icon-hamburger.svg";
 import links from "../constants/links";
 function Burger() {
   const burgerLinks = links;
@@ -19,7 +19,7 @@ function Burger() {
       </button>
       <ul
         tabIndex={0}
-        className="dropdown-content menu rounded-box z-[1] w-52 bg-black p-2 shadow"
+        className="menu dropdown-content z-[1] w-52 rounded-box bg-black p-2 shadow"
       >
         {burgerLinks.map(({ path, text }) => {
           return (

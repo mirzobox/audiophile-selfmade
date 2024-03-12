@@ -1,7 +1,7 @@
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
 import { toast } from "react-toastify";
-import SignOutIcon from "../assets/shared/desktop/icon-logout.svg";
+import SignOutIcon from "/assets/shared/desktop/icon-logout.svg";
 
 function AuthManager() {
   function out() {

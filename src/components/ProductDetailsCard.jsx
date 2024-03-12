@@ -23,21 +23,12 @@ function ProductDetailsCard({ productContent }) {
         </NavLink>
       </div>
       <picture>
-        <source
-          media="(min-width: 1024px)"
-          srcSet={categoryImage?.desktop.splice}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet={categoryImage?.tablet.splice}
-        />
-        <source
-          media="(min-width: 375px)"
-          srcSet={categoryImage?.mobile.splice}
-        />
+        <source media="(min-width: 1024px)" srcSet={categoryImage?.desktop} />
+        <source media="(min-width: 768px)" srcSet={categoryImage?.tablet} />
+        <source media="(min-width: 375px)" srcSet={categoryImage?.mobile} />
         <img
           className="mb-8 w-full rounded-lg object-cover object-center sm:mb-[52px]"
-          src={categoryImage?.mobile.splice}
+          src={"http://localhost:5173" + categoryImage?.mobile}
           alt={title}
         />
       </picture>

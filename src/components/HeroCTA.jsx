@@ -1,24 +1,24 @@
 import { NavLink } from "react-router-dom";
 
 // Images
-import ZX9SpeakerMobileImg from "../assets/home/mobile/image-speaker-zx9.png";
-import ZX9SpeakerTabletImg from "../assets/home/tablet/image-speaker-zx9.png";
-import ZX9SpeakerDesktopImg from "../assets/home/desktop/image-speaker-zx9.png";
+import ZX9SpeakerMobileImg from "/assets/home/mobile/image-speaker-zx9.png";
+import ZX9SpeakerTabletImg from "/assets/home/tablet/image-speaker-zx9.png";
+import ZX9SpeakerDesktopImg from "/assets/home/desktop/image-speaker-zx9.png";
 
-import ZX7SpeakerMobileImg from "../assets/home/mobile/image-speaker-zx7.jpg";
-import ZX7SpeakerTabletImg from "../assets/home/tablet/image-speaker-zx7.jpg";
-import ZX7SpeakerDesktopImg from "../assets/home/desktop/image-speaker-zx7.jpg";
+import ZX7SpeakerMobileImg from "/assets/home/mobile/image-speaker-zx7.jpg";
+import ZX7SpeakerTabletImg from "/assets/home/tablet/image-speaker-zx7.jpg";
+import ZX7SpeakerDesktopImg from "/assets/home/desktop/image-speaker-zx7.jpg";
 
-import YX1EarphoneMobileImg from "../assets/home/mobile/image-earphones-yx1.jpg";
-import YX1EarphoneTabletImg from "../assets/home/tablet/image-earphones-yx1.jpg";
-import YX1EarphoneDesktopImg from "../assets/home/desktop/image-earphones-yx1.jpg";
+import YX1EarphoneMobileImg from "/assets/home/mobile/image-earphones-yx1.jpg";
+import YX1EarphoneTabletImg from "/assets/home/tablet/image-earphones-yx1.jpg";
+import YX1EarphoneDesktopImg from "/assets/home/desktop/image-earphones-yx1.jpg";
 
 function HeroCTA() {
   return (
     <section className="py-16 sm:py-12 lg:py-20">
       <div className="base-container flex flex-col gap-6">
         {/* ZX9  */}
-        <section className="bg-circles-bg relative overflow-hidden rounded-lg bg-orange bg-cover  px-6 py-14 lg:bg-left lg:px-24 lg:py-32">
+        <section className="relative overflow-hidden rounded-lg bg-orange bg-circles-bg bg-cover  px-6 py-14 lg:bg-left lg:px-24 lg:py-32">
           <div className="flex flex-col items-center lg:flex-row">
             <div className="order-2 flex w-full flex-col items-center text-center lg:ml-auto lg:max-w-[349px] lg:items-start lg:text-left">
               <h2 className="title mb-6 text-[36px] text-white-100 sm:text-[56px]">

@@ -8,7 +8,6 @@ import CompanyInfo from "../components/CompanyInfo";
 import Categories from "../components/Categories";
 import { useEffect, useState } from "react";
 import getSingleData from "../utils/get-single-data";
-import getImageLocation from "../utils/get-image-location";
 import ProductCounter from "../components/ProductCounter";
 import { useDispatch } from "react-redux";
 import { incrementOrAddProduct } from "../redux/slices/cart";
@@ -83,21 +82,12 @@ function SingleProductDetails() {
             </div>
           </div>
           <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet={getImageLocation(image?.desktop)}
-            />
-            <source
-              media="(min-width: 624px)"
-              srcSet={getImageLocation(image?.tablet)}
-            />
-            <source
-              media="(min-width: 375px)"
-              srcSet={getImageLocation(image?.mobile)}
-            />
+            <source media="(min-width: 1024px)" srcSet={image?.desktop} />
+            <source media="(min-width: 624px)" srcSet={image?.tablet} />
+            <source media="(min-width: 375px)" srcSet={image?.mobile} />
             <img
               className="mb-10 w-full rounded-lg object-cover object-center sm:mb-0"
-              src={getImageLocation(image?.mobile)}
+              src={image?.mobile}
               alt={title}
             />
           </picture>
@@ -130,19 +120,19 @@ function SingleProductDetails() {
                   <picture>
                     <source
                       media="(min-width: 1024px)"
-                      srcSet={getImageLocation(gallery?.first?.desktop)}
+                      srcSet={gallery?.first?.desktop}
                     />
                     <source
                       media="(min-width: 624px)"
-                      srcSet={getImageLocation(gallery?.first?.tablet)}
+                      srcSet={gallery?.first?.tablet}
                     />
                     <source
                       media="(min-width: 375px)"
-                      srcSet={getImageLocation(gallery?.first?.mobile)}
+                      srcSet={gallery?.first?.mobile}
                     />
                     <img
                       className="w-full rounded-lg object-cover object-center"
-                      src={getImageLocation(gallery?.first?.mobile)}
+                      src={gallery?.first?.mobile}
                       alt={title}
                     />
                   </picture>
@@ -151,19 +141,19 @@ function SingleProductDetails() {
                   <picture>
                     <source
                       media="(min-width: 1024px)"
-                      srcSet={getImageLocation(gallery?.second?.desktop)}
+                      srcSet={gallery?.second?.desktop}
                     />
                     <source
                       media="(min-width: 624px)"
-                      srcSet={getImageLocation(gallery?.second?.tablet)}
+                      srcSet={gallery?.second?.tablet}
                     />
                     <source
                       media="(min-width: 375px)"
-                      srcSet={getImageLocation(gallery?.second?.mobile)}
+                      srcSet={gallery?.second?.mobile}
                     />
                     <img
                       className="w-full rounded-lg object-cover object-center"
-                      src={getImageLocation(gallery?.second?.mobile)}
+                      src={gallery?.second?.mobile}
                       alt={title}
                     />
                   </picture>
@@ -173,19 +163,19 @@ function SingleProductDetails() {
                 <picture>
                   <source
                     media="(min-width: 1024px)"
-                    srcSet={getImageLocation(gallery?.third?.desktop)}
+                    srcSet={gallery?.third?.desktop}
                   />
                   <source
                     media="(min-width: 624px)"
-                    srcSet={getImageLocation(gallery?.third?.tablet)}
+                    srcSet={gallery?.third?.tablet}
                   />
                   <source
                     media="(min-width: 375px)"
-                    srcSet={getImageLocation(gallery?.third?.mobile)}
+                    srcSet={gallery?.third?.mobile}
                   />
                   <img
                     className="w-full rounded-lg object-cover object-center"
-                    src={getImageLocation(gallery?.third?.mobile)}
+                    src={gallery?.third?.mobile}
                     alt={title}
                   />
                 </picture>
@@ -217,19 +207,13 @@ function SingleProductDetails() {
                   <picture>
                     <source
                       media="(min-width: 1024px)"
-                      srcSet={getImageLocation(image?.desktop)}
+                      srcSet={image?.desktop}
                     />
-                    <source
-                      media="(min-width: 624px)"
-                      srcSet={getImageLocation(image?.tablet)}
-                    />
-                    <source
-                      media="(min-width: 375px)"
-                      srcSet={getImageLocation(image?.mobile)}
-                    />
+                    <source media="(min-width: 624px)" srcSet={image?.tablet} />
+                    <source media="(min-width: 375px)" srcSet={image?.mobile} />
                     <img
                       className="mb-8 w-full rounded-lg object-cover object-center"
-                      src={getImageLocation(image?.mobile)}
+                      src={image?.mobile}
                       alt={title}
                     />
                   </picture>
