@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import getImageLocation from "../utils/get-image-location";
 
 function ProductDetailsCard({ productContent }) {
+  console.log(productContent);
   const {
     categoryImage,
     new: isNew,
@@ -25,19 +25,19 @@ function ProductDetailsCard({ productContent }) {
       <picture>
         <source
           media="(min-width: 1024px)"
-          srcSet={getImageLocation(categoryImage?.desktop)}
+          srcSet={categoryImage?.desktop.splice}
         />
         <source
           media="(min-width: 768px)"
-          srcSet={getImageLocation(categoryImage?.tablet)}
+          srcSet={categoryImage?.tablet.splice}
         />
         <source
           media="(min-width: 375px)"
-          srcSet={getImageLocation(categoryImage?.mobile)}
+          srcSet={categoryImage?.mobile.splice}
         />
         <img
           className="mb-8 w-full rounded-lg object-cover object-center sm:mb-[52px]"
-          src={getImageLocation(categoryImage?.mobile)}
+          src={categoryImage?.mobile.splice}
           alt={title}
         />
       </picture>
